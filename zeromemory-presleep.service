@@ -1,0 +1,10 @@
+[Unit]
+Description=Zero memory before sleep
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=-/usr/sbin/zeromemory
+
+[Install]
+WantedBy=sleep.target
