@@ -1,10 +1,10 @@
 [Unit]
 Description=Zero memory before sleep
-Before=sleep.target
+Before=sleep.target hibernate.target hybrid-sleep.target
 
 [Service]
 Type=oneshot
 ExecStart=-/usr/sbin/zeromemory
 
 [Install]
-WantedBy=sleep.target
+WantedBy=sleep.target hibernate.target hybrid-sleep.target
